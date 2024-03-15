@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orig"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_centerInParent="true">
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btn_scan"
+           android:layout_width="154dp"
+           android:layout_height="63dp"
+           android:layout_gravity="center_horizontal"
+           android:text="Scan"
+           android:textAllCaps="false"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:padding="20dp"
+           tools:ignore="HardcodedText" />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/history_Button"
+           android:layout_width="154dp"
+           android:layout_height="63dp"
+           android:layout_gravity="center_horizontal"
+           android:text="History"
+           android:textAllCaps="false"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:padding="20dp"
+           tools:ignore="HardcodedText" />
+
+   </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-18dp"
+        android:layout_marginTop="7dp"
+        android:text="QR Code Scanner By: Team Yey"
+        android:textAlignment="center"
+        android:textColor="#F9F9F9"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+
+</RelativeLayout>
+

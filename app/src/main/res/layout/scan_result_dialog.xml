@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+   >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Item Details"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/item_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Item: Mouse"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/amount_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Amount: 1200"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/category_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Category: Laboratory Equipment"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/brand_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Brand: A4Tech"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/condition_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Condtion: Working"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/date_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Date: 2024-01-31"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/employee_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Employee: Charles Ignacio"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/property_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Property: ABC"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/serial_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Serial: 1234"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/remarks_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Remarks: No Remarks"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/remarks_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:text="Remarks"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ok_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:text="Ok"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
