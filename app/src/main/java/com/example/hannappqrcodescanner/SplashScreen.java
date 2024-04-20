@@ -19,7 +19,17 @@ public class SplashScreen extends AppCompatActivity {
 
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                UserDetails userDetails = new UserDetails(SplashScreen.this);
+                String email = userDetails.getEmail();
+                String password = userDetails.getPassword();
+
+                if (email != null || password != null){
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                }
+                else{
+                    startActivity(new Intent(getApplicationContext(), Login.class));
+                }
+
             }
         }, 2000);
     }

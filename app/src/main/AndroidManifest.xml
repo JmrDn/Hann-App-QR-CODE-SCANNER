@@ -19,6 +19,15 @@
         android:theme="@style/Theme.HannAppQRCODESCANNER"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePasswordActivityStep2"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

@@ -7,6 +7,30 @@
     android:background="@drawable/orig"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello,"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/alias_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Loading..."
+        android:textSize="35sp"
+        android:layout_below="@id/hello"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        tools:ignore="HardcodedText" />
+
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -16,7 +40,7 @@
        <androidx.appcompat.widget.AppCompatButton
            android:id="@+id/btn_scan"
            android:layout_width="154dp"
-           android:layout_height="63dp"
+           android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
            android:text="Scan"
            android:textAllCaps="false"
@@ -28,9 +52,33 @@
        <androidx.appcompat.widget.AppCompatButton
            android:id="@+id/history_Button"
            android:layout_width="154dp"
-           android:layout_height="63dp"
+           android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
            android:text="History"
+           android:textAllCaps="false"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:padding="20dp"
+           tools:ignore="HardcodedText" />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/logout_Button"
+           android:layout_width="154dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:text="Logout"
+           android:textAllCaps="false"
+           android:textSize="20sp"
+           android:textStyle="bold"
+           android:padding="20dp"
+           tools:ignore="HardcodedText" />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/changePass_Button"
+           android:layout_width="154dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:text="Change Password"
            android:textAllCaps="false"
            android:textSize="20sp"
            android:textStyle="bold"

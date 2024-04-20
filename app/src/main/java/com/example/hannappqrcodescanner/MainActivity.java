@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
     Dialog scanResultDialog;
     Dialog sendRemarksDialog;
+    TextView aliasTV;
+    AppCompatButton logoutBtn;
+    AppCompatButton changePassBtn;
 
 
 
@@ -53,14 +56,43 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_scan = findViewById(R.id.btn_scan);
-        historyBtn = findViewById(R.id.history_Button);
-        btn_scan.setOnClickListener(v -> scanCode());
-        historyBtn.setOnClickListener(v1 ->{
-            gotoHistoryActivity();
-        });
+        initWidgets();
+        setUpName();
+        logOutUser();
+        setUpButtons();
 
         noInternetDialog();
+    }
+
+    private void setUpButtons() {
+        btn_scan.setOnClickListener(v -> scanCode());
+        historyBtn.setOnClickListener(v1 ->{gotoHistoryActivity();});
+
+        logoutBtn.setOnClickListener(v->{
+            UserDetails userDetails = new UserDetails(MainActivity.this);
+            userDetails.logout();
+            Toast.makeText(getApplicationContext(), "Successfully log out", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(), Login.class));
+        });
+
+        changePassBtn.setOnClickListener(v->{startActivity(new Intent(getApplicationContext(), ChangePasswordActivity.class));});
+    }
+
+    private void logOutUser() {
+
+    }
+
+    private void setUpName() {
+        UserDetails userDetails = new UserDetails(MainActivity.this);
+       aliasTV.setText(userDetails.getAlias());
+    }
+
+    private void initWidgets() {
+        btn_scan = findViewById(R.id.btn_scan);
+        historyBtn = findViewById(R.id.history_Button);
+        aliasTV = findViewById(R.id.alias_TextView);
+        logoutBtn = findViewById(R.id.logout_Button);
+        changePassBtn = findViewById(R.id.changePass_Button);
     }
 
     private void gotoHistoryActivity() {
@@ -292,6 +324,7 @@ public class MainActivity extends AppCompatActivity {
             db.child("remarks").setValue(remarks).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
+                    db.child("condition").setValue("Pending");
                     db.child("remdate").setValue(date);
                     Toast.makeText(getApplicationContext(), "Remarks send Successfully", Toast.LENGTH_LONG).show();
                     sendRemarksDialog.dismiss();
@@ -303,6 +336,8 @@ public class MainActivity extends AppCompatActivity {
                     sendRemarksDialog.dismiss();
                 }
             });
+
+
         });
 
         cancelBtn.setOnClickListener(v1->{
@@ -363,5 +398,11 @@ public class MainActivity extends AppCompatActivity {
                 dialogInterface.dismiss();
             }
         }).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        super.onBackPressed();
     }
 }
